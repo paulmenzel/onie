@@ -58,7 +58,8 @@ if [ "$firmware" = "uefi" ] ; then
     bios="-bios $OVMF"
 fi
 
-/usr/bin/kvm -m $MEM \
+qemu-system-x86 -enable-kvm \
+    -m $MEM \
     -name "onie" \
     $bios \
     -boot $boot $cdrom \
