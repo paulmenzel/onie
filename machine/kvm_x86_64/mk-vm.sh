@@ -5,13 +5,13 @@
 #  SPDX-License-Identifier:     GPL-2.0
 
 MEM=1024
-DISK="$HOME/kvm/onie-x86-demo.img"
+DISK="/dev/shm/onie-x86-demo.img"
 
 # Path to ONIE installer .iso image
-CDROM="$HOME/kvm/onie-recovery-x86_64-kvm_x86_64-r0.iso"
+CDROM="$HOME/onie-recovery-x86_64-kvm_x86_64-r0.iso"
 
 # Path to OVMF firmware for qemu
-# Download OVMF from http://www.tianocore.org/ovmf/
+# Download OVMF from https://www.tianocore.org/ovmf/
 OVMF="$HOME/kvm/OVMF.fd"
 
 # VM will listen on telnet port $KVM_PORT
