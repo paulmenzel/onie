@@ -58,7 +58,7 @@ if [ "$firmware" = "uefi" ] ; then
     bios="-bios $OVMF"
 fi
 
-sudo /usr/bin/kvm -m $MEM \
+/usr/bin/kvm -m $MEM \
     -name "onie" \
     $bios \
     -boot $boot $cdrom \
@@ -81,6 +81,6 @@ sleep 1.0
 
 telnet localhost $KVM_PORT
 
-echo "to kill kvm:  sudo kill $kvm_pid"
+echo "to kill kvm:  kill $kvm_pid"
 
 exit 0
